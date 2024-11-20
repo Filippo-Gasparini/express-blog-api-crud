@@ -7,3 +7,5 @@ const router = express.router
 const postsController = require('./controllers')
 
 
+
+router.get('/', postsController.index)

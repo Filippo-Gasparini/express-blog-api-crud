@@ -1,4 +1,4 @@
-console.log('array')
+
 
 const posts = [
     {

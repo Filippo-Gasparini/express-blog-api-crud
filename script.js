@@ -23,10 +23,7 @@ router.get('/:id', postsController.show)
 router.delete('/:id', postsController.destroy)
 
 
-// app.get('/store', (req,res) => {
-    //     res.send('Questa è la rotta')
-    //     console.log(res)
-// })
+
     
 
 app.use('/posts', router);
@@ -34,3 +31,10 @@ app.listen(port, () => {
     console.log("Server started...")
 })
 
+
+
+
+
+// aggiungo un elemento nell'array 
+
+router.store('/store', postsController.store)

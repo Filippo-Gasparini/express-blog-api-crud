@@ -23,4 +23,38 @@ function destroy(req, res) {
 }
 
 
-module.exports = { index, show, destroy}
+
+// funzione store
+
+function store(req, res) {
+
+// inserisco un nuovo id
+
+const newId = posts[posts.length - 1].id + 1;
+
+//creo un nuovo oggetto
+
+const newPosts = {
+	id: 6,
+	title: "Cheesecake",
+	content: `lorem ipsum`,
+	image: "Cheesecake.jpeg",
+	tags: ["Dolci", "Dolci al cioccolato", "Torte", "Ricette vegetariane", "Ricette al forno"],
+}
+
+// aggiungo l'oggetto all'array
+
+posts.push(newPosts)
+
+// verifico se corretto
+
+console.log(posts)
+
+// status
+
+res.status(201);
+res.json(newPosts)
+
+}
+
+module.exports = { index, show, destroy, store}

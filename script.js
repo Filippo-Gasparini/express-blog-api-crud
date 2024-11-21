@@ -32,9 +32,10 @@ app.listen(port, () => {
 })
 
 
+router.use(express.json());
 
 
 
 // aggiungo un elemento nell'array 
 
-router.store('/store', postsController.store)
+router.store('/newPosts', postsController.store)

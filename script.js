@@ -27,14 +27,18 @@ router.delete('/:id', postsController.destroy)
     
 
 app.use('/posts', router);
+
 app.listen(port, () => {
     console.log("Server started...")
 })
 
 
+
 router.use(express.json());
 
-
+// router.post('/newPosts', (req,res) => {
+    
+// })
 
 // aggiungo un elemento nell'array 
 

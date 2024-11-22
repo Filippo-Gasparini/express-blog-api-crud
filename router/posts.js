@@ -9,7 +9,7 @@ router.get('/', postsController.index)
 
 // richiamo un singolo post
 
-router.get('/:id', postsController.show)
+router.get('/:id',checkTime, postsController.show)
 
 // elimino un singolo post dalla lista
 
